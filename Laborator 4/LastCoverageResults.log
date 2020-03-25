@@ -1,0 +1,21 @@
+[2020-03-26 00:10:46] [info] Start Program:
+Path:"C:\\Users\\Andrei\\source\\repos\\Laborator_4\\lab04-MesesanAndrei\\x64\\Debug\\Laborator 4.exe"
+Arguments:
+Working directory: "C:\\Users\\Andrei\\source\\repos\\Laborator_4\\lab04-MesesanAndrei\\Laborator 4\\"
+Modules: Selected: C:\Users\Andrei\source\repos\Laborator_4\lab04-MesesanAndrei\x64\Debug\Laborator 4.exe Excluded: 
+Sources: Selected: C:\Users\Andrei\source\repos\Laborator_4\lab04-MesesanAndrei\Laborator 4 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\Andrei\AppData\Local\Temp\1chpdcjl.nkh 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2020-03-26 00:10:46] [info] Module: C:\Users\Andrei\source\repos\Laborator_4\lab04-MesesanAndrei\x64\Debug\Laborator 4.exe is selected because it matches selected pattern: C:\Users\Andrei\source\repos\Laborator_4\lab04-MesesanAndrei\x64\Debug\Laborator 4.exe
+[2020-03-26 00:10:46] [info] ----------------------------------------------------
+[2020-03-26 00:10:46] [info] Coverage binary generated in file: C:\Users\Andrei\AppData\Local\Temp\1chpdcjl.nkh
+[2020-03-26 00:10:46] [info] ----------------------------------------------------
