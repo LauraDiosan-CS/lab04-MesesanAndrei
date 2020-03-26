@@ -1,8 +1,4 @@
-﻿  Laborator 4.cpp
-  RepositorySTL.cpp
-C:\Users\Andrei\source\repos\Laborator_4\lab04-MesesanAndrei\Laborator 4\RepositorySTL.cpp(27,20): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
-  Service.cpp
-  Teste.cpp
+﻿  Service.cpp
   Tranzactie.cpp
   Generating Code...
   Laborator 4.vcxproj -> C:\Users\Andrei\source\repos\Laborator_4\lab04-MesesanAndrei\x64\Debug\Laborator 4.exe

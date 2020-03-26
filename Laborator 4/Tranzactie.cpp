@@ -2,13 +2,25 @@
 #include <string.h>
 
 Tranzactie::Tranzactie() {
+	//Constructorul implicit
+	id = 0;
 	ziua = 0;
 	suma = 0;
-	tip = NULL;
-	descriere = NULL;
+	tip = new char[0];
+	descriere = new char[0];
 }
 
-Tranzactie::Tranzactie(int ziua, int suma, const char* tip, const char* descriere) {
+Tranzactie::Tranzactie(int id, int ziua, int suma, const char* tip, const char* descriere) {
+	/*
+		Constructorul general.
+		in: id - int
+			ziua - int
+			suma - int
+			tip - const char*
+			descriere - const char*
+		out: -
+	*/
+	this->id = id;
 	this->ziua = ziua;
 	this->suma = suma;
 	this->tip = new char[strlen(tip) + 1];
@@ -18,6 +30,12 @@ Tranzactie::Tranzactie(int ziua, int suma, const char* tip, const char* descrier
 }
 
 Tranzactie::Tranzactie(const Tranzactie& t) {
+	/*
+		Constructorul de copiere.
+		in: t - Tranzactie
+		out: -
+	*/
+	this->id = t.id;
 	this->ziua = t.ziua;
 	this->suma = t.suma;
 	this->tip = new char[strlen(t.tip) + 1];
@@ -27,26 +45,56 @@ Tranzactie::Tranzactie(const Tranzactie& t) {
 }
 
 int Tranzactie::getZiua() {
+	/*
+		Returneaza ziua.
+		in: -
+		out: ziua
+	*/
 	return ziua;
 }
 
 void Tranzactie::setZiua(int z) {
+	/*
+		Modifica ziua.
+		in: z - int
+		out: -
+	*/
 	ziua = z;
 }
 
 int Tranzactie::getSuma() {
+	/*
+		Returneaza suma.
+		in: -
+		out: suma
+	*/
 	return suma;
 }
 
 void Tranzactie::setSuma(int s) {
+	/*
+		Modifica suma.
+		in: s - int
+		out: -
+	*/
 	suma = s;
 }
 
 char* Tranzactie::getTip() {
+	/*
+		Returneaza tipul.
+		in: -
+		out: tip
+	*/
 	return tip;
 }
 
 void Tranzactie::setTip(char* t) {
+	/*
+		Modifica tipul.
+		in: t - char*
+		out: -
+	*/
 	if (tip)
 		delete[]tip;
 	tip = new char[strlen(t) + 1];
@@ -54,10 +102,29 @@ void Tranzactie::setTip(char* t) {
 }
 
 char* Tranzactie::getDescriere() {
+	/*
+		Returneaza descrierea.
+		in: -
+		out: descriere
+	*/
 	return descriere;
 }
 
+void Tranzactie::setId(int id){
+	/*
+		Modifica id-ul.
+		in: id - int
+		out: -
+	*/
+	this->id = id;
+}
+
 void Tranzactie::setDescriere(char* d) {
+	/*
+		Modifica descrierea.
+		in: d - char*
+		out: -
+	*/
 	if (descriere)
 		delete[]descriere;
 	descriere = new char[strlen(d) + 1];
@@ -65,6 +132,7 @@ void Tranzactie::setDescriere(char* d) {
 }
 
 Tranzactie::~Tranzactie() {
+	//Destructorul
 	if (tip)
 		delete[]tip;
 	if (descriere)
@@ -76,12 +144,18 @@ Tranzactie::~Tranzactie() {
 }
 
 Tranzactie& Tranzactie::operator=(const Tranzactie& t) {
+	/*
+		Operator de atribuire.
+		in: t - Tranzactie
+		out: continutul indicat de this
+	*/
 	if (this == &t)
 		return *this;
 	if (tip)
 		delete[]tip;
 	if (descriere)
 		delete[]descriere;
+	id = t.id;
 	ziua = t.ziua;
 	suma = t.suma;
 	tip = new char[strlen(t.tip) + 1];
@@ -91,6 +165,20 @@ Tranzactie& Tranzactie::operator=(const Tranzactie& t) {
 	return *this;
 }
 
+int Tranzactie::getId(){
+	/*
+		Returneaza id-ul.
+		in: -
+		out: id
+	*/
+	return this->id;
+}
+
 bool Tranzactie::operator==(const Tranzactie& t) {
-	return (ziua == t.ziua) and (suma == t.suma) and (strcmp(tip, t.tip) == 0) and (strcmp(descriere, t.descriere) == 0);
+	/*
+		Operatorul de egalitate.
+		in: t - Tranzactie
+		out: true daca este adevarat, false daca nu
+	*/
+	return this->id == t.id;
 }
